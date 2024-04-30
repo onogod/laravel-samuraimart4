@@ -14,15 +14,15 @@ class ReviewController extends Controller
 /*    public function index()
     {
         //
-    }
+    }*/
 
     /**
      * Show the form for creating a new resource.
      */
-  //  public function create()
-    //{
+   /* public function create()
+    {
         //
-  //  } 
+    } */
 
     /**
      * Store a newly created resource in storage.
@@ -44,34 +44,37 @@ class ReviewController extends Controller
     /**
      * Display the specified resource.
      */
+
+
     public function show(Review $review)
     {
-        $reviews = $product->reviews()->get();
+        $reviews  = $product->reviews()->get();
 
         return view('products.show', compact('product','reviews'));
-    }
+    } 
 
     /**
      * Show the form for editing the specified resource.
      */
- //   public function edit(Review $review)
-   // {
+ /*  
+    public function edit(Review $review)
+    {
         //
-   // }
-
+    }
+    */
     /**
      * Update the specified resource in storage.
      */
-   // public function update(Request $request, Review $review)
-  ////  {
+  /*  public function update(Request $request, Review $review)
+    {
         //
-  //  }
-
+    }
+    */
     /**
      * Remove the specified resource from storage.
      */
- //   public function destroy(Review $review)
- //   {
+   /* public function destroy(Review $review)
+    {
         //
-   // }
+    }*/
 }

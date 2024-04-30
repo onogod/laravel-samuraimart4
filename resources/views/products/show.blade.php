@@ -103,7 +103,7 @@
 
                     </div>
                     @endforeach
-                </div><br />
+                </div>
 
                 @auth 
                 <div class="row">
