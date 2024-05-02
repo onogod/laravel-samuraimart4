@@ -18,9 +18,9 @@
         
     
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/XXXXXXXXXX.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4fa2b2d431.js" crossorigin="anonymous"></script>
     <link href="{{ asset('css/samuraimart.css') }}" rel="stylesheet">
-
+    </head>
     {{-- <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
             @include('layouts.navigation')
