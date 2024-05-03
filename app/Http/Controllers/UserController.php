@@ -96,4 +96,16 @@ class UserController extends Controller
         }
         return to_route('mypage');
     }
+    public function edit_password()
+    {
+        return view('users.edit_password');
+    }
+    public function favorite()
+    {
+        $user = Auth::user();
+
+        $favorite_products = $user->favorite_products;
+
+        return view('users.favorite',compact('favorite_products'));
+    }
 }
