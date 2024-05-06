@@ -10,6 +10,17 @@ use Kyslik\ColumnSortable\Sortable;
 class Product extends Model
 {
     use HasFactory,Sortable;
+
+    protected $fillable = [
+        'name',
+        'description',
+        'price',
+        'category_id',
+        'image',
+        'recommend_flag',
+        'carriage_flag',
+
+    ];
     
     
     public function category() {
