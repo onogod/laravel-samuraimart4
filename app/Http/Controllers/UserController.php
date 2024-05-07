@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\Shopping_cart;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Gloudemans\Shopping_Cart\Facades\Cart;
+use Illuminate\Support\Facades\DB;
 
 
 class UserController extends Controller
@@ -15,6 +19,17 @@ class UserController extends Controller
 
         return view('users.mypage',compact('user'));
     }
+    public function cart_history_index(Request $request)
+    {
+        $page = $request->page != null ? $request->page : 1 ;
+        $user_id = Auth::user()->id;
+        $billings = Shopping_Cart::getCurrentUserOrders($user_id);
+        $total = count($billings);
+        $billings = new LengthAwarePafinator(array_slice($billings,($page - 1 )* 15,15), $total, 15,$page, array('path' => $request->url()));
+
+        return view('users.cart_history_index', compact('billings','total'));
+    }
+
     /**
      * Display a listing of the resource.
      */
