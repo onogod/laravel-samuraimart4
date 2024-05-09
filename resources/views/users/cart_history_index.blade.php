@@ -8,7 +8,7 @@
                 <a href="{{ route('mypage') }}">マイページ</a> > 注文履歴
             </span>
         
-            <div class="container mr-4">
+            <div class="container mt-4">
                 <table class="table">
                     <thead>
                         <tr>
@@ -19,7 +19,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($billings as $billings)
+                        @foreach($billings as $billing)
                         <tr>
                             <td>{{ $billing['code'] }}</td>
                             <td>{{ $billing['created_at'] }}</td>

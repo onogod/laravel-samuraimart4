@@ -16,7 +16,7 @@ class Shopping_Cart extends Model
 {
     $shopping_carts = DB::table('shopping_cart')->where("instance","{$user_id}")->get();
 
-    $oders = [];
+    $orders = [];
 
     foreach ($shopping_carts as $order) {
         $orders[] = [
