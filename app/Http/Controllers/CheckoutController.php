@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Gloudemans\Shopping_Cart\Facades\Cart;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Stripe\Stripe;
@@ -125,8 +125,9 @@ class CheckoutController extends Controller
     
 
             
-    
-        return view('checkout.success');
+    return view('checkout.success');
+        
     }
+    
 
 }
